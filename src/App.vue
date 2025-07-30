@@ -4,7 +4,7 @@
       <h1 class="titulo">Tram<span>IA</span></h1>
       <h2 class="subtitulo">by Danka</h2>
       <p class="descripcion">
-        Herramienta con IA para comprender trámites estatales y requisitos complejos en un lenguaje simple y accesible.
+        Herramienta con IA para traducir trámites estatales y requisitos complejos a un lenguaje simple y accesible.
       </p>
     </div>
 
@@ -76,7 +76,7 @@ export default {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer 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", //
+            "Authorization": "Bearer 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", //
             "HTTP-Referer": "http://localhost:5173/",
             "X-Title": "TramIA"
           },
@@ -103,6 +103,12 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..900&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -112,7 +118,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100dvh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,8 +290,6 @@ input[type="file"] {
   font-family: 'Manrope', sans-serif;
 }
 
-
-
 .boton {
   background: linear-gradient(90deg, #00cc66, #00b34d);
   color: white;
@@ -399,6 +404,129 @@ input[type="file"] {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/*ADAPTACIÓN MOBILE*/
+@media (max-width: 767px) {
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  #app {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .fondo {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 16px;
+  }
+
+  .header {
+    text-align: center;
+    padding: 8px 16px;
+  }
+
+  .titulo {
+    font-size: 50px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .subtitulo {
+    font-size: 0.98rem;
+    margin-top: -2px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .descripcion {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0 16px;
+    line-height: 1.4;
+    max-width: 100%;
+    /* 🔧 antes 90%, para evitar margen visual raro */
+    margin: 0 0 0 auto;
+  }
+
+  .contenedor {
+    width: 90%;
+    max-width: 100%;
+    padding: 24px 16px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .textarea {
+    height: 140px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+
+  input[type="file"] {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  input[type="file"]::-webkit-file-upload-button {
+    margin: 0 auto 6px;
+    margin-right: 3px;
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .boton {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+    margin-top: 8px;
+  }
+
+  .respuesta {
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 32px;
+    width: 100%;
   }
 }
 </style>
