@@ -1,9 +1,28 @@
-<<<<<<< HEAD
-# Vue 3 + Vite
+# TramIA
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+**TramIA** es una herramienta desarrollada por Danka que utiliza inteligencia artificial para ayudar a las personas a entender y simplificar trámites del Estado. Está pensada para procesar textos administrativos confusos, desordenados o difíciles de interpretar, y extraer la información clave en un lenguaje claro y accesible.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
-=======
-# tramIA-project
->>>>>>> 922d7e9723e3734825f99d501358ed4ad3aeb31e
+## 🚀 ¿Para qué sirve?
+
+- Analiza trámites complejos del Estado.
+- Detecta y resume los requisitos más importantes.
+- Explica la información en un lenguaje cotidiano.
+- Ahorra tiempo y reduce la frustración al enfrentarse a trámites inentendibles.
+
+## 🧠 ¿Cómo funciona?
+
+El usuario copia el texto de un trámite (por ejemplo, una normativa o una resolución), lo pega en la interfaz de TramIA y la herramienta, mediante IA, devuelve un resumen claro con los datos más relevantes.
+
+## 💻 Tecnologías utilizadas
+
+- [Vue 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- OpenAI API (o alternativa compatible vía OpenRouter)
+- HTML, CSS y JavaScript
+
+## 📦 Instalación
+
+```bash
+npm install
+npm run dev
+
